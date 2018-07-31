@@ -50,7 +50,7 @@ class Start{
 				break;
 			}
 			System.out.println("서로다른값을 입력하세요");
-		    
+		    sc.close();
 			}
 			}
 			
