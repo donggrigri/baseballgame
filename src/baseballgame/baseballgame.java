@@ -23,8 +23,6 @@ class Start{
 		 int[] game=new int[3];
 	       int[]insert=new int[3];
 			void gameinit() {
-			
-			
 			for(int i=0;i<game.length;i++) {
 				game[i]=(int)(Math.random()*9+1);
 			}
@@ -45,14 +43,11 @@ class Start{
 				System.out.println((i+1)+"번쨰 수");
 				insert[i]=sc.nextInt();
 			}
-			
 			if(insert[0]!=insert[1] && insert[0]!=insert[2] && insert[1]!=insert[2]) {
-				break;
-			}
+				break;}
 			System.out.println("서로다른값을 입력하세요");
 		    sc.close();
-			}
-			}
+			}}
 			
 			  //스트라이크
 			int strike() {
@@ -94,7 +89,14 @@ class Start{
 				System.out.println("낫싱");		
 			}
 			else {
-				System.out.println("스트라이크:"+strike()+"볼:"+ball());
+				if(strike()>0 && ball()>0) {
+				System.out.println("스트라이크:"+strike()+"볼:"+ball());}
+				else if(strike()>0) {
+					System.out.println("스트라이크:"+strike());
+				}
+				else if(ball()>0) {
+					System.out.println("볼:"+ball());
+				}
 			}
 			}
 			
