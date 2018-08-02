@@ -8,7 +8,6 @@ public class baseballgame {
 			start.gameinit();
 			while(true) {
 			start.input();
-			System.out.println("스트라이크:"+start.strike()+"볼:"+start.ball());
 			start.nothing();
 			if(start.strike()>=3) {
 				break;
@@ -46,6 +45,7 @@ class Start{
 				System.out.println((i+1)+"번쨰 수");
 				insert[i]=sc.nextInt();
 			}
+			
 			if(insert[0]!=insert[1] && insert[0]!=insert[2] && insert[1]!=insert[2]) {
 				break;
 			}
@@ -92,6 +92,9 @@ class Start{
 				}
 			if(out==9) {
 				System.out.println("낫싱");		
+			}
+			else {
+				System.out.println("스트라이크:"+strike()+"볼:"+ball());
 			}
 			}
 			
